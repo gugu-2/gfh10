@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FDFCF7;
+    color: #141413;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom subtle hairline styling */
+  .border-hairline {
+    border-color: #E1DACD;
+  }
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDFCF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E1DACD;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8BFB0;
+}
+
+/* Subtle pulse animation for live nodes */
+@keyframes status-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+.animate-status-pulse {
+  animation: status-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
